@@ -5,59 +5,102 @@
 <br />
 <br />
 
-<div align="center">
-    <a href="https://refine.dev">Home Page</a> |
-</div>
 </div>
 
 <br />
 
-<div align="center"><strong>Build your <a href="https://reactjs.org/">React</a>-based CRUD applications, without constraints.</strong><br>An open source, headless web application framework developed with flexibility in mind.
+# Marble AI Assessment Documentation
 
-<br />
-<br />
+In this assessment, I undertook the task of implementing a user interface based on the Figma design and prototype provided by Marble AI. The project is built upon the [**Refine**](https://refine.dev) framework, a React-based, headless web application framework developed for building CRUD applications with flexibility in mind.
 
-[![Discord](https://img.shields.io/discord/837692625737613362.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/refine)
-[![Twitter Follow](https://img.shields.io/twitter/follow/refine_dev?style=social)](https://twitter.com/refine_dev)
+## Initial Steps
 
-<a href="https://www.producthunt.com/posts/refine-3?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-refine&#0045;3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=362220&theme=light&period=daily" alt="refine - 100&#0037;&#0032;open&#0032;source&#0032;React&#0032;framework&#0032;to&#0032;build&#0032;web&#0032;apps&#0032;3x&#0032;faster | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+1. **Understanding Refine Framework:**
+   I started by thoroughly studying the Refine framework to grasp the overall project structure and flow.
 
-</div>
+2. **Cloning the Project:**
+   Using the provided documentation command:
 
-## About
+   ```bash
+   npm create refine-app@latest -- --example blog-refine-daisyui
+   ```
 
-This example provides a great starting point to learn how to build a full-fledged admin panel by integrating [**daisyUI**](https://daisyui.com) with [**refine**](https://github.com/refinedev/refine)
+   I cloned the project and set up the initial environment.
 
-**daisyUI** is a TailwinCSS based component templates library. It provides shorter, semantic class names composed from regular TailwindCSS classes that also come with responsive, color, size and shape variants. As such, daisyUI offers the convenience of using friendly class names to style markups while beautifying React code. On top of these, daisyUI classes can be overridden and extented. Besides, it lets us use regular TailwindCSS classes as well. In this example, you'll discover how to use daisyUI templates to style React components.
+3. **Exploring UI and Code:**
+   To gain a better understanding, I explored the UI components and delved into the codebase to comprehend how each component interacts.
 
-refine is a React-based powerful framework for building low-code applications. It is primarily focused on implementing data-heavy apps such as internal tools, dashboards, admin panels, and storefronts. It comes with a core package that segregates app concerns like data handling, authentication, access control, etc., into React contexts. It also supports integration with industry standard backend systems such and UI frameworks. It is highly customizable and extensible. In this example, you get an opportunity to learn how to integrate **daisyUI** with **refine** for building an admin panel app.
+## Implementation Process
 
-Refer to the complete tutorial of this app [here.](https://refine.dev/blog/daisy-ui-react-admin-panel/)
+### Cards Component
+
+1. **UI Planning:**
+   I visually planned the UI for the chart component based on the Figma design and prototype provided by Marble AI.
+
+2. **Card Implementation:**
+   Initially, I implemented four hard-coded cards with titles, prices, and edit icons on the top right corner.
+
+3. **Optimization:**
+   I optimized the card implementation by creating an object containing card details. This allowed for the creation of a reusable card component, and data was mapped accordingly.
+
+4. **Interactive Features:**
+   Added Tailwind effects and hover animations to make the chart collapsible when the user clicks on the arrow in the top-right corner of the card.
+
+## Charts Component
+
+1. **Recharts Library:**
+   Utilized the Recharts library for implementing the charts.
+
+2. **Mock Data Creation:**
+   Created mock data according to the Figma design values, including date, price1, price2, value1, value2, and percentage.
+
+3. **Table Implementation:**
+   Implemented a table with the created data and optimized it with CartesianGrid, Label, Values, Line Colors, and Tooltip functionalities.
+
+## Date Range Picker Component
+
+1. **Data Filtering:**
+   Used the React DatePicker library to enable users to select a date range. The selected date range filters the data, and the filtered data is then passed to the LineChart component.
+
+2. **Graph Dynamics:**
+   Implemented functionality to dynamically update graphs based on the selected date range.
+
+## Folder Structure and Clean Code
+
+1. **Modular Structure:**
+   Maintained a clean and modular folder structure to ensure code organization and readability.
+
+2. **Bug-Free Implementation:**
+   Ensured a bug-free implementation with a focus on an impressive UI that aligns with the Figma design.
 
 ## Quick Start
 
-Run the following command to download the project:
+To run the project locally:
 
-```
-npm create refine-app@latest -- --example blog-refine-daisyui
-```
+1. _Clone the repository._
+2. Navigate to the project folder.
+3. Install dependencies with npm install.
+4. Start the development server with npm run dev.
+5. Access the application at http://localhost:5173.
 
-Once the setup is complete, navigate to the project folder and start your project with:
+## Conclusion
 
-```
-npm run dev
-```
+This assessment has been successfully completed, delivering the exact UI specified in the Figma design. The implementation includes a collapsible chart, data filtering through a date range picker, and a clean and bug-free codebase with an impressive UI.
 
-Your application will be accessible at http://localhost:5173
+For a more detailed tutorial on this app, you can refer to the complete blog post here.
 
-![Dashboard Page](https://refine.ams3.cdn.digitaloceanspaces.com/blog/2023-09-06-daisy-ui-panel/dash-1.png "Dashboard Page")
+## Resources
 
-![Product List Page](https://refine.ams3.cdn.digitaloceanspaces.com/blog/2023-09-06-daisy-ui-panel/dash-2.png "Product List Page")
+[Refine Documentation](https://refine.dev/docs/tutorial/introduction/index/)
+[daisyUI Documentation](https://daisyui.com/docs/install/)
 
-![Product Edit Page](https://refine.ams3.cdn.digitaloceanspaces.com/blog/2023-09-06-daisy-ui-panel/dash-3.png "Product Edit Page")
+Feel free to explore the charts, analyze the data, and enjoy the seamless UI!
 
-### Resources
+## Author
 
-Refer to [daisyUI docs](https://daisyui.com/docs/install/) for more information.
+**Karthigeyan K**
 
-Refer to complete CRUD app [tutorial](https://refine.dev/docs/tutorial/introduction/index/) to learn more about refine.
+- Website: [My Portfolio](https://comfy-vacherin-e10233.netlify.app/)
+- LinkedIn: [https://www.linkedin.com/in/karthigeyan-k-53116a19a/](https://www.linkedin.com/in/karthigeyan-k-53116a19a/)
+- GitHub: [https://github.com/Karthigeyankiruba](https://github.com/Karthigeyankiruba)
+- Email: karthigeyan0901@gmail.com
