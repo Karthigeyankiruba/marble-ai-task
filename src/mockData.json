@@ -1,0 +1,146 @@
+[
+  {
+    "date": "Feb 2023",
+    "value1": 252,
+    "value2": 348,
+    "price1": "12,109",
+    "price2": "13,899",
+    "percentage": "9"
+  },
+  {
+    "date": "Mar 2023",
+    "value1": 797,
+    "value2": 342,
+    "price1": "11,342",
+    "price2": "21,234",
+    "percentage": "6"
+  },
+  {
+    "date": "Apr 2023",
+    "value1": 497,
+    "value2": 633,
+    "price1": "2,854",
+    "price2": "43,232",
+    "percentage": "9"
+  },
+  {
+    "date": "May 2023",
+    "value1": 897,
+    "value2": 356,
+    "price1": "12,234",
+    "price2": "13,899",
+    "percentage": "9"
+  },
+  {
+    "date": "Jun 2023",
+    "value1": 297,
+    "value2": 469,
+    "price1": "23,453",
+    "price2": "2,343",
+    "percentage": "3"
+  },
+  {
+    "date": "Jul 2023",
+    "value1": 797,
+    "value2": 349,
+    "price1": "12,755",
+    "price2": "4,999",
+    "percentage": "9"
+  },
+  {
+    "date": "Aug 2023",
+    "value1": 397,
+    "value2": 567,
+    "price1": "2,454",
+    "price2": "4,344",
+    "percentage": "4"
+  },
+  {
+    "date": "Sep 2023",
+    "value1": 345,
+    "value2": 546,
+    "price1": "1,109",
+    "price2": "6,899",
+    "percentage": "2"
+  },
+  {
+    "date": "Oct 2023",
+    "value1": 656,
+    "value2": 232,
+    "price1": "17,65",
+    "price2": "8,355",
+    "percentage": "5"
+  },
+  {
+    "date": "Nov 2023",
+    "value1": 654,
+    "value2": 756,
+    "price1": "34,594",
+    "price2": "22,674",
+    "percentage": "6"
+  },
+  {
+    "date": "Dec 2023",
+    "value1": 433,
+    "value2": 645,
+    "price1": "13,109",
+    "price2": "2,657",
+    "percentage": "6"
+  },
+  {
+    "date": "Jan 2024",
+    "value1": 234,
+    "value2": 544,
+    "price1": "4,243",
+    "price2": "6,757",
+    "percentage": "7"
+  },
+  {
+    "date": "Feb 2024",
+    "value1": 565,
+    "value2": 656,
+    "price1": "5,565",
+    "price2": "7,454",
+    "percentage": "4"
+  },
+  {
+    "date": "Mar 2024",
+    "value1": 545,
+    "value2": 567,
+    "price1": "32,243",
+    "price2": "2,243",
+    "percentage": "6"
+  },
+  {
+    "date": "Apr 2024",
+    "value1": 345,
+    "value2": 755,
+    "price1": "42,643",
+    "price2": "8,755",
+    "percentage": "1"
+  },
+  {
+    "date": "May 2024",
+    "value1": 767,
+    "value2": 454,
+    "price1": "62,756",
+    "price2": "4,849",
+    "percentage": "7"
+  },
+  {
+    "date": "Jun 2024",
+    "value1": 249,
+    "value2": 563,
+    "price1": "42,888",
+    "price2": "2,445",
+    "percentage": "8"
+  },
+  {
+    "date": "Jul 2024",
+    "value1": 334,
+    "value2": 767,
+    "price1": "12,777",
+    "price2": "13,544",
+    "percentage": "8"
+  }
+]

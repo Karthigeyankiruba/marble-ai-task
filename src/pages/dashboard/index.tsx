@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { CrudFilter, useList } from "@refinedev/core";
 import dayjs from "dayjs";
 import Stats from "../../components/dashboard/Stats";
@@ -7,6 +7,8 @@ import { ResponsiveBarChart } from "../../components/dashboard/ResponsiveBarChar
 import { TabView } from "../../components/dashboard/TabView";
 import { RecentSales } from "../../components/dashboard/RecentSales";
 import { IChartDatum, TTab } from "../../interfaces";
+import { Icon } from "@iconify/react";
+import DashboardCards from "../../components/dashboard/components/DashboardCards";
 
 const filters: CrudFilter[] = [
   {
@@ -22,6 +24,8 @@ const filters: CrudFilter[] = [
 ];
 
 export const Dashboard: React.FC = () => {
+  const [collapseChart, setCollapseChart] = useState(true);
+
   const { data: dailyRevenue } = useList<IChartDatum>({
     resource: "dailyRevenue",
     filters,
@@ -61,43 +65,19 @@ export const Dashboard: React.FC = () => {
       content: (
         <ResponsiveAreaChart
           kpi="Daily revenue"
-          data={memoizedRevenueData}
+          data1={memoizedRevenueData}
+          data2={memoizedOrdersData}
           colors={{
-            stroke: "rgb(54, 162, 235)",
-            fill: "rgba(54, 162, 235, 0.2)",
-          }}
-        />
-      ),
-    },
-    {
-      id: 2,
-      label: "Daily Orders",
-      content: (
-        <ResponsiveBarChart
-          kpi="Daily orders"
-          data={memoizedOrdersData}
-          colors={{
-            stroke: "rgb(255, 159, 64)",
-            fill: "rgba(255, 159, 64, 0.7)",
-          }}
-        />
-      ),
-    },
-    {
-      id: 3,
-      label: "New Customers",
-      content: (
-        <ResponsiveAreaChart
-          kpi="New customers"
-          data={memoizedNewCustomersData}
-          colors={{
-            stroke: "rgb(76, 175, 80)",
-            fill: "rgba(54, 162, 235, 0.2)",
+            stroke1: "#6EC1F3",
+            fill1: "rgba(54, 162, 235, 0.2)",
+            stroke2: "E1F3FC",
+            fill2: "rgba(54, 162, 235, 0.2)",
           }}
         />
       ),
     },
   ];
+// console.log("collapseChart", collapseChart);
 
   return (
     <>
@@ -106,7 +86,26 @@ export const Dashboard: React.FC = () => {
         dailyOrders={dailyOrders}
         newCustomers={newCustomers}
       />
-      <TabView tabs={tabs} />
+
+      <div className="card p-4 bg-white w-auto">
+
+          <DashboardCards
+            collapseChart={collapseChart}
+            setCollapseChart={setCollapseChart}
+          />
+
+
+        {collapseChart && (
+          <div>
+            <TabView tabs={tabs} collapseChart={collapseChart} setCollapseChart={setCollapseChart}/>
+
+            {/* {tabs?.map((tab: TTab, index: number) => (
+              <div>{tab?.content}</div>
+            ))} */}
+          </div>
+        )}
+      </div>
+
       <RecentSales />
     </>
   );
