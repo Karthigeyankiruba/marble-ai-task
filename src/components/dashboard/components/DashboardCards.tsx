@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import Card from "./Card";
@@ -56,32 +58,6 @@ const DashboardCards: React.FC<DashboardProps> = ({
     <>
       <div className="flex justify-between items-center">
         <div className="flex gap-20">
-
-
-          {/* <div className="card w-72 bg-[#f1f1f1] text-black">
-            <div className="card-body p-4">
-              <div className="flex flex-row justify-between">
-                <div>
-                  <h6 className="card-title text-sm font-light">
-                    Online store sessions
-                  </h6>
-                  <div className="border-b border-dashed border-zinc-300"></div>
-                </div>
-                <button className="p-2 rounded-md hover:bg-zinc-300">
-                  <Icon icon="bxs:pencil" className="text-zinc-600" />
-                </button>
-              </div>
-              <div className="flex flex-row gap-1">
-                <h1 className="card-content font-bold">255,581</h1>
-
-                <span className="flex flex-row items-center text-sm text-zinc-600">
-                  <Icon icon="iconamoon:arrow-down-2-fill" />
-                  9%
-                </span>
-              </div>
-            </div>
-          </div> */}
-
           {cardDetails?.map((card, index) => (
             <Card
               index={index}
@@ -92,7 +68,7 @@ const DashboardCards: React.FC<DashboardProps> = ({
           ))}
         </div>
 
-        <div className="mr-5" onClick={() => setCollapseChart((prev) => !prev)}>
+        <div className="mr-5 rounded-full p-2 transition ease-in duration-300 hover:bg-zinc-200 " onClick={() => setCollapseChart((prev) => !prev)}>
           <Icon icon={collapseChart ? "iconamoon:arrow-up-2-bold" : "iconamoon:arrow-down-2-bold"} fontSize={30} />
         </div>
       </div>

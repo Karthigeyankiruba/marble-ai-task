@@ -13,6 +13,7 @@ import { Icon } from "@iconify/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import mockData from "../../../src/mockData.json";
+import { LineDot } from "recharts/types/cartesian/Line";
 
 type TResponsiveAreaChartProps = {
   kpi: string;
@@ -98,16 +99,16 @@ export const ResponsiveAreaChart = ({
           <Tooltip content={<CustomTooltip />} />
           {/* <Legend />  */}
           <Line
-            dot={null}
-            activeDot={{ r: 0 }}
+            dot={false}
+            activeDot={false}
             type="monotone"
             dataKey="value1"
             stroke="#14a4ff"
             strokeWidth={2}
           />
           <Line
-            dot={null}
-            activeDot={{ r: 0 }}
+            dot={false}
+            activeDot={false}
             type="monotone"
             dataKey="value2"
             stroke="#b2e1ff"
@@ -119,7 +120,7 @@ export const ResponsiveAreaChart = ({
 
       <div className="flex gap-10 justify-end mt-3">
         <div className="group flex gap-2 items-center rounded-sm bg-zinc-50 w-64 px-5">
-            <div className="border-b-2 border-dashed border-[#b2e1ff] w-4"></div>
+          <div className="border-b-2 border-dashed border-[#b2e1ff] w-4"></div>
           <DatePicker
             dateFormat="MMM d, yyyy"
             selected={startDate}
