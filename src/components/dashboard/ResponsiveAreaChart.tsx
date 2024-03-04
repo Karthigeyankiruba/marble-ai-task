@@ -13,7 +13,7 @@ import { Icon } from "@iconify/react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import mockData from "../../../src/mockData.json";
-import { LineDot } from "recharts/types/cartesian/Line";
+
 
 type TResponsiveAreaChartProps = {
   kpi: string;
@@ -118,14 +118,14 @@ export const ResponsiveAreaChart = ({
         </LineChart>
       </ResponsiveContainer>
 
-      <div className="flex gap-10 justify-end mt-3">
+      <div className="flex gap-10 justify-end mt-3 text-zinc-500">
         <div className="group flex gap-2 items-center rounded-sm bg-zinc-50 w-64 px-5">
           <div className="border-b-2 border-dashed border-[#b2e1ff] w-4"></div>
           <DatePicker
             dateFormat="MMM d, yyyy"
             selected={startDate}
             onChange={(date) => setStartDate(date)}
-            className="group p-2 rounded-sm bg-zinc-50"
+            className="group p-2 rounded-sm bg-zinc-50 w-full text-sm focus: outline-none"
           />
         </div>
         <div className="group flex gap-2 items-center rounded-sm bg-zinc-50 w-64 px-5">
@@ -135,7 +135,7 @@ export const ResponsiveAreaChart = ({
             dateFormat="MMM d, yyyy"
             selected={endDate}
             onChange={(date) => setEndDate(date)}
-            className="group p-2 rounded-sm bg-zinc-50"
+            className="group p-2 rounded-sm bg-zinc-50 w-full text-sm focus: outline-none"
           />
         </div>
       </div>

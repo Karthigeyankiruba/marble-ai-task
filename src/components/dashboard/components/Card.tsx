@@ -35,7 +35,9 @@ const Card: React.FC<CardProps> = ({ card, index }) => {
   return (
     <div
       key={index}
-      className={`card w-72 ${index === 0 ? 'bg-[#f1f1f1]' : ''} hover:bg-[#f1f1f1]  text-black`}
+      className={`card w-72 ${
+        index === 0 ? "bg-[#f1f1f1]" : ""
+      } hover:bg-[#f1f1f1]  text-black`}
       onMouseEnter={() => handleMouseEnter(index)}
       onMouseLeave={handleMouseLeave}
     >
@@ -63,13 +65,14 @@ const Card: React.FC<CardProps> = ({ card, index }) => {
 
           <div className="border-b border-dashed border-zinc-300"></div>
 
-
-
           {hoveredIndex === index ? (
-            <div className="dropdown dropdown-right dropdown-bottom p-2 rounded-md hover:bg-zinc-300">
-              <div tabIndex={0} role="button">
-                <Icon icon={card.titleIcon} className="text-zinc-600" />
-              </div>
+            <div
+              tabIndex={0}
+              role="button"
+              className="dropdown dropdown-right dropdown-bottom p-2 rounded-md hover:bg-zinc-300"
+            >
+              <Icon icon={card.titleIcon} className="text-zinc-600" />
+
               <ul
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-0 shadow bg-base-100 rounded-md w-64 text-sm font-light"
