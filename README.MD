@@ -9,9 +9,9 @@
 
 <br />
 
-# Marble AI Assessment Documentation
+# Marble AI Assignment Documentation
 
-In this assessment, I undertook the task of implementing a user interface based on the Figma design and prototype provided by Marble AI. The project is built upon the [**Refine**](https://refine.dev) framework, a React-based, headless web application framework developed for building CRUD applications with flexibility in mind.
+In this sssignment, I undertook the task of implementing a user interface based on the Figma design and prototype provided by Marble AI. The project is built upon the [**Refine**](https://refine.dev) framework, a React-based, headless web application framework developed for building CRUD applications with flexibility in mind.
 
 ## Initial Steps
 
@@ -85,7 +85,7 @@ To run the project locally:
 
 ## Conclusion
 
-This assessment has been successfully completed, delivering the exact UI specified in the Figma design. The implementation includes a collapsible chart, data filtering through a date range picker, and a clean and bug-free codebase with an impressive UI.
+This assignment has been successfully completed, delivering the exact UI specified in the Figma design. The implementation includes a collapsible chart, data filtering through a date range picker, and a clean and bug-free codebase with an impressive UI.
 
 For a more detailed tutorial on this app, you can refer to the complete blog post here.
 
